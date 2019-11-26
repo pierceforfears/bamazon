@@ -5,15 +5,15 @@
 // Dependencies
 // =============================================================
 
-// Requiring our Todo model
-var db = require("../models");
+// Requiring our Product model
+const db = require("../models");
 
 // Routes
 // =============================================================
 module.exports = function (app) {
 
     // GET route for getting all of the products
-    app.get("/api/product", function (req, res) {
+    app.get("/api/products", function (req, res) {
         // Write code here to retrieve all of the todos from the database and res.json them
         // back to the user
         db.Product.findAll({}).then(function (dbPost) {
@@ -22,8 +22,8 @@ module.exports = function (app) {
 
     });
 
-    // POST route for saving a new todo. We can create product with the data in req.body
-    app.post("/api/product", function (req, res) {
+    // POST route for saving a new product. We can create product with the data in req.body
+    app.post("/api/products", function (req, res) {
         // Write code here to create a new todo and save it to the database
         // and then res.json back the new todo to the user
         db.Todo.create({ productName: req.body.productName, departmentName: req.body.departmentName, price: req.body.price, stockQuantity: req.body.stockQuantity }).then(function (dbPost) {
@@ -32,9 +32,18 @@ module.exports = function (app) {
 
     });
 
+    // GET Request
+    // Responds with just the requested product at the referenced id
+    app.get('/api/products/:id', function (req, res) {
+        db.Product.find({ where: { id: req.params.id } })
+            .then(function (data) {
+                res.json(data);
+            });
+    });
+
     // DELETE route for deleting products. We can get the id of the todo to be deleted from
     // req.params.id
-    app.delete("/api/product/:id", function (req, res) {
+    app.delete("/api/products/:id", function (req, res) {
         db.Product.destroy({
             where: {
                 id: req.params.id
@@ -47,7 +56,7 @@ module.exports = function (app) {
     });
 
     // PUT route for updating todos. We can get the updated product data from req.body
-    app.put("/api/product", function (req, res) {
+    app.put("/api/products", function (req, res) {
         db.Product.update(req.body,
             {
                 where: {
@@ -55,7 +64,9 @@ module.exports = function (app) {
                 }
             })
             .then(function (dbPost) {
-                res.json(dbPost);
+                db.Product.findAll({}).then(function (dbPost) {
+                    res.json(dbPost)
+                });
             });
     });
 };

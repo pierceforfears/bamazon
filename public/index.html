@@ -5,17 +5,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <title>Bamazon</title>
+    <script src="https://kit.fontawesome.com/80691335c3.js" crossorigin="anonymous"></script>
+    <title>BAMAZON</title>
 </head>
 
 <body>
-    <header class="jumbotron">Bamazon</header>
+    <header class="jumbotron">
+        <h1>BAMAZON</h1>
+        <nav class="navbar">
+            <button type="button" class="rounded btncart pt-2 pb-2 pl-2 pr-3" data-toggle="modal"
+                data-target="#results-modal">
+                <i class="fa-3x fas fa-shopping-cart"></i>
+            </button>
+        </nav>
+    </header>
+    <div class="container mt-5">
+        <div class="hide alert alert-danger" id="error" role="alert">Sorry friend. Not enough in stock to fulfill your
+            order.
+        </div>
+        <div class="row col-md-12">
+            <table class="table">
+                <thead class="thead-dark text-align-center">
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Department</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">In Stock</th>
+                        <th scope="col">Quanity</th>
+                        <th scope="col"></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="table-body bg-light tbodypage"></tbody>
+            </table>
+        </div>
+    </div>
 
+    <div id="results-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="results-modal">Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <!-- <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Product</th>
+                                <th scope="col">Department</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quanity</th>
+                            </tr> -->
+                        </thead>
+                        <tbody class="tbodymodal table-body"></tbody>
+                    </table>
+                    <div class="totalCart"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                    </button>
+                    <button type="button" class="btnPurchase btn btn-primary">Purchase Items</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <!-- javascript file -->
     <script type="text/javascript" src="js/app.js"></script>
 
