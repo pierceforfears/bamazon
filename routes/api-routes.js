@@ -56,14 +56,14 @@ module.exports = function (app) {
     });
 
     // PUT route for updating todos. We can get the updated product data from req.body
-    app.put("/api/products", function (req, res) {
+    app.put("/api/products/:id", function (req, res) {
         db.Product.update(req.body,
             {
                 where: {
-                    id: req.body.id
+                    id: req.params.id
                 }
             })
-            .then(function (dbPost) {
+            .then(function () {
                 db.Product.findAll({}).then(function (dbPost) {
                     res.json(dbPost)
                 });
