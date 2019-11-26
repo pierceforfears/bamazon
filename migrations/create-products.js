@@ -8,30 +8,21 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      productName: {
         type: Sequelize.STRING,
         allowNull: false
       },
-      department: {
+      departmentName: {
         type: Sequelize.STRING,
         allowNull: false
       },
       price: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.DECIMAL(10, 2),
         allowNull: false
       },
-      stock: {
+      stockQuantity: {
         type: Sequelize.INTEGER,
-        defaultValue: 10,
         allowNull: false
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
       }
     });
   },
