@@ -27,3 +27,13 @@ VALUES ("MODS 40 Foot Tiny Home", "Home and Garden", 36000.00 100),
        ("Godzilla Lawn Gnome", "Home and Garden", 22.00, 100), 
        ("Dr. Pickle Lip Balm", "Personal Hygiene", 12.00, 100)      
 
+UPDATE products SET stockQuantity = 100 WHERE id=1;
+UPDATE products SET stockQuantity = 100 WHERE id=2;
+UPDATE products SET stockQuantity = 100 WHERE id=3;
+UPDATE products SET stockQuantity = 100 WHERE id=4;
+UPDATE products SET stockQuantity = 100 WHERE id=5;
+UPDATE products SET stockQuantity = 100 WHERE id=6;
+UPDATE products SET stockQuantity = 100 WHERE id=7;
+UPDATE products SET stockQuantity = 100 WHERE id=8;
+UPDATE products SET stockQuantity = 100 WHERE id=9;
+UPDATE products SET stockQuantity = 100 WHERE id=10;
