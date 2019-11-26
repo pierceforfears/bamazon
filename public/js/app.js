@@ -4,10 +4,10 @@ const renderItems = function (items) {
     items.forEach(function (item) {
         let newProduct = $(` <tr>
           <td class="id">${item.id}</td>
-          <td class="product_name">${item.productName}</td>
-          <td class="department_name">${item.departmentName}</td>
+          <td class="productName">${item.productName}</td>
+          <td class="departmentName">${item.departmentName}</td>
           <td class="price">${item.price}</td>
-          <td class="stock_quantity">${item.stockQuantity}</td>
+          <td class="stockQuantity">${item.stockQuantity}</td>
           <td class="quantity"><input class="buy1" id="input"></td>
           <td><button type="button" class="btn btn-info">Add to Cart</button><td>
         </tr>`);
@@ -19,19 +19,19 @@ const clearInput = function () {
     $("[id =input]").val("");
 };
 
-// const validate = function (item) {
-//     if (item.incart.padStart(4, 0) > item.instock.padStart(4, 0)) {
-//         $(".alert").removeClass("hide");
-//         clearInput();
-//     } else if (isNaN(item.incart)) {
-//         $(".alert").removeClass("hide");
-//         clearInput();
-//     }
-//     else {
-//         cart.push(item);
-//         clearInput();
-//     }
-// };
+const validate = function (item) {
+    if (item.incart > item.instock) {
+        $(".alert").removeClass("hide");
+        clearInput();
+    } else if (isNaN(item.incart)) {
+        $(".alert").removeClass("hide");
+        clearInput();
+    }
+    else {
+        cart.push(item);
+        clearInput();
+    }
+};
 
 
 
@@ -73,8 +73,7 @@ $(document).ready(() => {
                 .val()
         };
 
-        // validate(item);
-
+        validate(item);
 
         console.table(cart);
     });
@@ -128,7 +127,7 @@ $(".btnPurchase").on("click", function () {
         $.ajax({
             url: `/api/products/${cart[i].id}`,
             type: "PUT",
-            data: `stock_quantity= ${stockUpdate}`
+            data: `stockQuantity= ${stockUpdate}`
         }).then(function (data) {
             $('.tbodypage').empty();
             renderItems(data);
@@ -136,7 +135,7 @@ $(".btnPurchase").on("click", function () {
             console.log(data);
         })
         $('.modal-body').empty();
-        $('.modal-body').append("Purchase approved!")
+        $('.modal-body').append("Weird stuff coming your way!")
 
     }
     cart = [];
