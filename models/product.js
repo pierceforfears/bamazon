@@ -1,22 +1,22 @@
 "use strict";
-module.exports = function(sequelize, DataTypes) {
-  const Product = sequelize.define(
+module.exports = function(connection, Sequelize) {
+  const Product = connection.define(
     "Product",
     {
       productName: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         allowNull: false
       },
       departmentName: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         allowNull: false
       },
       price: {
-        type: DataTypes.DECIMAL(10, 2),
+        type: Sequelize.DECIMAL(10, 2),
         allowNull: false
       },
       stockQuantity: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         allowNull: false
       }
     },
