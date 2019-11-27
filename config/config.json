@@ -15,12 +15,10 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "qq3pe6x4sgjjm4p9",
-    "password": "wcuruun44d1kyxjh",
-    "database": "zmgzallrb7u3vram",
-    "host": "mysql://qq3pe6x4sgjjm4p9:wcuruun44d1kyxjh@ipobfcpvprjpmdo9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/zmgzallrb7u3vram
-
-    ",
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
   }
