@@ -73,7 +73,6 @@ $(document).ready(() => {
     validate(item);
 
     console.table(cart);
-    // alert("item has been added to cart");
   });
 
   $(".btncart").on("click", function() {
@@ -136,8 +135,4 @@ $(".btnPurchase").on("click", function() {
     $(".btnPurchase").hide();
   }
   cart = [];
-});
-
-$(".btnClose").on("click", function() {
-  $(".btnPurchase").show();
 });
