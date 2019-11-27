@@ -7,6 +7,14 @@ module.exports = (sequelize, DataTypes) => {
       departmentName: DataTypes.STRING,
       price: DataTypes.INTEGER,
       stockQuantity: DataTypes.INTEGER
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      }
     },
     {}
   );
