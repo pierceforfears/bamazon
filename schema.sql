@@ -16,7 +16,7 @@ CREATE TABLE products(
 Select * FROM Products;
 
 INSERT INTO Products (productName, departmentName, price, stockQuantity) 
-VALUES ("MODS 40 Foot Tiny Home", "Home and Garden", 36000.00 100),
+VALUES ("MODS 40 Foot Tiny Home", "Home and Garden", 36000.00, 100),
 	   ("1500 Live Ladybugs", "Pets", 17.00, 100),
        ("Uranium Ore", "Sporting Goods", 40.00, 100),
        ("Back to the Roots Organic Mushroom Farm Grow Kit", "Home and Garden", 17.00, 100),
