@@ -1,7 +1,41 @@
-h1{
-    display: inline-block;
+.jumbotron {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: #3c415e;
 }
-
+.navbar {
+  background-color: #3c415e;
+}
+h1 {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  margin-bottom: 0;
+}
+.weird {
+  font-size: 65px;
+  font-family: "Kalam", cursive;
+  color: #50e8ef;
+  letter-spacing: -4px;
+}
+.wantStuff {
+  font-family: "Caveat", cursive;
+  color: #50e8ef;
+}
+.btncart {
+  float: right;
+  margin-right: 50px;
+}
+body {
+  background-image: url("/assets/images/henry-co-SDR3oDS4mOc-unsplash.jpg");
+  background-color: #3c415e;
+}
+.container {
+  margin-top: 20px;
+  opacity: 0.8;
+}
+table {
+  font-family: "Open Sans", sans-serif;
+}
 .hide {
-    display: none;
-  }
+  display: none;
+}
