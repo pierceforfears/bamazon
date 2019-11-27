@@ -16,16 +16,16 @@ CREATE TABLE products(
 Select * FROM Products;
 
 INSERT INTO Products (productName, departmentName, price, stockQuantity) 
-VALUES ("MODS 40 Foot Tiny Home", "Home and Garden", 36000.00, 100),
-	   ("1500 Live Ladybugs", "Pets", 17.00, 100),
-       ("Uranium Ore", "Sporting Goods", 40.00, 100),
-       ("Back to the Roots Organic Mushroom Farm Grow Kit", "Home and Garden", 17.00, 100),
-       ("Cat Butt Tissue Holder", "Home and Garden", 36.00, 100),
-       ("Real Human Finger Bones - Metacarpal", "Oddities and Ends", 15.00, 100),
-       ("Gourmet Peanut Butter & Jelly of the Month Club - 12 Months", "Prepared Foods", 269.00, 100),  
-       ("Bacon Scented Mustache", "Personal Hygiene", 4.00, 100),      
-       ("Godzilla Lawn Gnome", "Home and Garden", 22.00, 100), 
-       ("Dr. Pickle Lip Balm", "Personal Hygiene", 12.00, 100)      
+VALUES ("MODS 40 Foot Tiny Home", "Home and Garden", 36000.00, 1),
+	("1500 Live Ladybugs", "Pets", 17.00, 15),
+       ("Uranium Ore", "Science and Technology", 40.00, 92),
+       ("Organic Mushroom Farm Grow Kit", "Home and Garden", 17.00, 10),
+       ("Cat Butt Tissue Holder", "Home and Garden", 36.00, 10),
+       ("Artificial Human Finger Bones", "Oddities and Ends", 15.00, 10),
+       ("PB & Jelly of the Month Club", "Prepared Foods", 269.00, 1),  
+       ("Bacon Scented Mustache", "Personal Hygiene", 4.00, 77),      
+       ("Godzilla Lawn Gnome", "Home and Garden", 22.00, 54), 
+       ("Dr. Pickle Lip Balm", "Personal Hygiene", 12.00, 11)      
 
 UPDATE products SET stockQuantity = 100 WHERE id=1;
 UPDATE products SET stockQuantity = 100 WHERE id=2;
