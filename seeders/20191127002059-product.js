@@ -23,7 +23,7 @@ module.exports = {
         },
         {
           productName: "Uranium Ore",
-          departmentName: "Sporting Goods",
+          departmentName: "Science and Technology",
           price: 40.0,
           stockQuantity: 100,
           createdAt: new Date(),
