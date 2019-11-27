@@ -16,12 +16,12 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "qq3pe6x4sgjjm4p9",
-    "password": "wcuruun44d1kyxjh",
-    "database": "zmgzallrb7u3vram",
-    "host": "ipobfcpvprjpmdo9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    // "username": "qq3pe6x4sgjjm4p9",
+    // "password": "wcuruun44d1kyxjh",
+    // "database": "zmgzallrb7u3vram",
+    // "host": "ipobfcpvprjpmdo9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
-    "operatorsAliases": false,
+    // "operatorsAliases": false,
     "use_env_variable": "JAWSDB_URL"
   }
 }
