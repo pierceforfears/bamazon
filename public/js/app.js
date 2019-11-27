@@ -132,7 +132,6 @@ $(".btnPurchase").on("click", function() {
       });
     $(".modal-body").empty();
     $(".modal-body").append("Weird stuff coming your way!");
-    $(".btnPurchase").hide();
   }
   cart = [];
 });
