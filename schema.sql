@@ -37,3 +37,6 @@ UPDATE products SET stockQuantity = 100 WHERE id=7;
 UPDATE products SET stockQuantity = 100 WHERE id=8;
 UPDATE products SET stockQuantity = 100 WHERE id=9;
 UPDATE products SET stockQuantity = 100 WHERE id=10;
+
+-- to refresh the bamazon database:
+-- npx sequelize-cli db:seed:all --env production
