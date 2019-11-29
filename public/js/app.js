@@ -74,36 +74,36 @@ $(document).ready(() => {
 
     console.table(cart);
     // alert("i've been clicked");
-    $(".modal").modal("show");
-    $(".modal-body").empty();
+    //   $(".modal").modal("show");
+    //   $(".modal-body").empty();
 
-    $(".modal-body").append(`  <table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Product</th>
-        <th scope="col">Department</th>
-        <th scope="col">Price</th>
-        <th scope="col">Quanity</th>
-      </tr>
-    </thead>
-    <tbody class="tbodymodal table-body"></tbody>
-  </table>
-  <div class="totalCart"></div>`);
-    let totalcost = 0;
-    for (let i = 0; i < cart.length; i++) {
-      totalcost +=
-        parseFloat(cart[i].price) * parseFloat(cart[i].incart.padStart(3, 0));
-      console.log(cart[i]);
-      $(".tbodymodal").append(`<tr>
-            <td class="cartid">${cart[i].id}</td>
-            <td class="cart-productName">${cart[i].name}</td>
-            <td class="cart-departmentName">${cart[i].department}</td>
-            <td class="cartPrice">$${cart[i].price}</td>
-            <td class="cartQuantity">${cart[i].incart}</td>
-            </tr>`);
-    }
-    $(".totalCart").append(`<h4>TOTAL PRICE:   $${totalcost}</h4>`);
+    //   $(".modal-body").append(`  <table class="table">
+    //   <thead class="thead-dark">
+    //     <tr>
+    //       <th scope="col">Id</th>
+    //       <th scope="col">Product</th>
+    //       <th scope="col">Department</th>
+    //       <th scope="col">Price</th>
+    //       <th scope="col">Quanity</th>
+    //     </tr>
+    //   </thead>
+    //   <tbody class="tbodymodal table-body"></tbody>
+    // </table>
+    // <div class="totalCart"></div>`);
+    //   let totalcost = 0;
+    //   for (let i = 0; i < cart.length; i++) {
+    //     totalcost +=
+    //       parseFloat(cart[i].price) * parseFloat(cart[i].incart.padStart(3, 0));
+    //     console.log(cart[i]);
+    //     $(".tbodymodal").append(`<tr>
+    //           <td class="cartid">${cart[i].id}</td>
+    //           <td class="cart-productName">${cart[i].name}</td>
+    //           <td class="cart-departmentName">${cart[i].department}</td>
+    //           <td class="cartPrice">$${cart[i].price}</td>
+    //           <td class="cartQuantity">${cart[i].incart}</td>
+    //           </tr>`);
+    //   }
+    //   $(".totalCart").append(`<h4>TOTAL PRICE:   $${totalcost}</h4>`);
   });
 
   $(".btncart").on("click", function() {
