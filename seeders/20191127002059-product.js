@@ -9,7 +9,7 @@ module.exports = {
           productName: "MODS 40 Foot Tiny Home",
           departmentName: "Home and Garden",
           price: 36000.0,
-          stockQuantity: 100,
+          stockQuantity: 1,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -17,7 +17,7 @@ module.exports = {
           productName: "1500 Live Ladybugs",
           departmentName: "Pets",
           price: 17.0,
-          stockQuantity: 100,
+          stockQuantity: 15,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -25,7 +25,7 @@ module.exports = {
           productName: "Uranium Ore",
           departmentName: "Science and Technology",
           price: 40.0,
-          stockQuantity: 100,
+          stockQuantity: 92,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -33,7 +33,7 @@ module.exports = {
           productName: "Organic Mushroom Farm Grow Kit",
           departmentName: "Home and Garden",
           price: 17.0,
-          stockQuantity: 100,
+          stockQuantity: 7,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -41,7 +41,7 @@ module.exports = {
           productName: "Cat Butt Tissue Holder",
           departmentName: "Home and Garden",
           price: 36.0,
-          stockQuantity: 100,
+          stockQuantity: 10,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -49,7 +49,7 @@ module.exports = {
           productName: "Artificial Human Finger Bones",
           departmentName: "Oddities and Ends",
           price: 15.0,
-          stockQuantity: 100,
+          stockQuantity: 10,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -57,7 +57,7 @@ module.exports = {
           productName: "PB & Jelly of the Month Club",
           departmentName: "Prepared Foods",
           price: 369.0,
-          stockQuantity: 100,
+          stockQuantity: 2,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -65,7 +65,7 @@ module.exports = {
           productName: "Bacon Scented Mustache",
           departmentName: "Personal Hygiene",
           price: 4.0,
-          stockQuantity: 100,
+          stockQuantity: 4,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -73,7 +73,7 @@ module.exports = {
           productName: "Godzilla Lawn Gnome",
           departmentName: "Home and Garden",
           price: 22.0,
-          stockQuantity: 100,
+          stockQuantity: 54,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -81,7 +81,7 @@ module.exports = {
           productName: "Dr. Pickle Lip Balm",
           departmentName: "Personal Hygiene",
           price: 12.0,
-          stockQuantity: 100,
+          stockQuantity: 99,
           createdAt: new Date(),
           updatedAt: new Date()
         }
