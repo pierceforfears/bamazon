@@ -163,10 +163,10 @@ $(".btnPurchase").on("click", function() {
       });
     $(".modal-body").empty();
     $(".modal-body").append("Weird stuff coming your way!");
-    $(".btnPurchase").hide();
+    // $(".btnPurchase").hide();
   }
   cart = [];
-  $(".btnClose").on("click", function() {
-    $(".btnPurchase").show();
-  });
+  // $(".btnClose").on("click", function() {
+  //   $(".btnPurchase").show();
+  // });
 });
