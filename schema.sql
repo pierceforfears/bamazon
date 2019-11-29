@@ -2,18 +2,18 @@ DROP DATABASE IF EXISTS bamazon;
 
 CREATE database bamazon;
 
-USE bamazon;
-
 CREATE TABLE products(
 	id INTEGER AUTO_INCREMENT NOT NULL,
 	productName VARCHAR(100) NOT NULL,
 	departmentName VARCHAR(100) NOT NULL,
 	price DECIMAL NOT NULL,
 	stockQuantity INTEGER NOT NULL,
+       createdAt TIMESTAMP NOT NULL DEFAULT NOW() ON UPDATE NOW(),
+       updatedAt TIMESTAMP NOT NULL DEFAULT NOW() ON UPDATE NOW(),
 	PRIMARY KEY (id)
 );
 
-Select * FROM Products;
+SELECT * FROM Products;
 
 INSERT INTO Products (productName, departmentName, price, stockQuantity) 
 VALUES ("MODS 40 Foot Tiny Home", "Home and Garden", 36000.00, 1),
@@ -21,11 +21,11 @@ VALUES ("MODS 40 Foot Tiny Home", "Home and Garden", 36000.00, 1),
        ("Uranium Ore", "Science and Technology", 40.00, 92),
        ("Organic Mushroom Farm Grow Kit", "Home and Garden", 17.00, 10),
        ("Cat Butt Tissue Holder", "Home and Garden", 36.00, 10),
-       ("Artificial Human Finger Bones", "Oddities and Ends", 15.00, 10),
-       ("PB & Jelly of the Month Club", "Prepared Foods", 269.00, 1),  
+       ("Artificial Metacarpal", "Oddities and Ends", 15.00, 10),
+       ("PB & Jelly of the Month Club", "Prepared Foods", 269.00, 2),  
        ("Bacon Scented Mustache", "Personal Hygiene", 4.00, 77),      
        ("Godzilla Lawn Gnome", "Home and Garden", 22.00, 54), 
-       ("Dr. Pickle Lip Balm", "Personal Hygiene", 12.00, 11)      
+       ("Dr. Pickle Lip Balm", "Personal Hygiene", 12.00, 99)      
 
 UPDATE products SET stockQuantity = 100 WHERE id=1;
 UPDATE products SET stockQuantity = 100 WHERE id=2;

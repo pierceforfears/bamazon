@@ -6,7 +6,17 @@ module.exports = (sequelize, DataTypes) => {
       productName: DataTypes.STRING,
       departmentName: DataTypes.STRING,
       price: DataTypes.INTEGER,
-      stockQuantity: DataTypes.INTEGER
+      stockQuantity: DataTypes.INTEGER,
+      created_at: {
+        type: "TIMESTAMP",
+        defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
+        allowNull: false
+      },
+      updated_at: {
+        type: "TIMESTAMP",
+        defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
+        allowNull: false
+      }
     },
     {}
   );
