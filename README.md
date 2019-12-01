@@ -40,5 +40,9 @@ Modal displays success message when items are purchased.
 
 ### Inventory reduced
 
-Inventory is reduced by number of items purchansed (-1 Bacon Scented Mustache, -4 Godzilla Lawn Gnomes, -2 Dr. Pickle Dr. Pickle Lip Balms).
-![Screen Shot 2019-12-01 at 10 40 07 AM](https://user-images.githubusercontent.com/20098958/69916270-15c91080-1427-11ea-934f-a34057cd4a18.png)
+Inventory is reduced by number of items purchased:
+
+- -1 Bacon Scented Mustache
+- -4 Godzilla Lawn Gnomes
+- -2 Dr. Pickle Dr. Pickle Lip Balms
+  ![Screen Shot 2019-12-01 at 10 40 07 AM](https://user-images.githubusercontent.com/20098958/69916270-15c91080-1427-11ea-934f-a34057cd4a18.png)
