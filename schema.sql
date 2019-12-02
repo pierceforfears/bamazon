@@ -27,16 +27,16 @@ VALUES ("MODS 40 Foot Tiny Home", "Home and Garden", 36000.00, 1),
        ("Godzilla Lawn Gnome", "Home and Garden", 22.00, 54), 
        ("Dr. Pickle Lip Balm", "Personal Hygiene", 12.00, 99)      
 
-UPDATE products SET stockQuantity = 100 WHERE id=1;
-UPDATE products SET stockQuantity = 100 WHERE id=2;
-UPDATE products SET stockQuantity = 100 WHERE id=3;
-UPDATE products SET stockQuantity = 100 WHERE id=4;
-UPDATE products SET stockQuantity = 100 WHERE id=5;
-UPDATE products SET stockQuantity = 100 WHERE id=6;
-UPDATE products SET stockQuantity = 100 WHERE id=7;
-UPDATE products SET stockQuantity = 100 WHERE id=8;
-UPDATE products SET stockQuantity = 100 WHERE id=9;
-UPDATE products SET stockQuantity = 100 WHERE id=10;
+UPDATE products SET stockQuantity = 1 WHERE id=1;
+UPDATE products SET stockQuantity = 15 WHERE id=2;
+UPDATE products SET stockQuantity = 92 WHERE id=3;
+UPDATE products SET stockQuantity = 10 WHERE id=4;
+UPDATE products SET stockQuantity = 10 WHERE id=5;
+UPDATE products SET stockQuantity = 10 WHERE id=6;
+UPDATE products SET stockQuantity = 2 WHERE id=7;
+UPDATE products SET stockQuantity = 77 WHERE id=8;
+UPDATE products SET stockQuantity = 54 WHERE id=9;
+UPDATE products SET stockQuantity = 99 WHERE id=10;
 
 -- to refresh the bamazon database:
 -- npx sequelize-cli db:seed:all --env production
