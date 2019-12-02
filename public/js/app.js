@@ -21,12 +21,15 @@ const clearInput = function() {
 
 const validate = function(item) {
   if (item.incart > item.instock) {
+    console.log("not in stock");
     $(".alert").removeClass("hide");
     clearInput();
   } else if (isNaN(item.incart)) {
+    console.log("not a valid quantity");
     $(".alert").removeClass("hide");
     clearInput();
   } else {
+    console.log("in stock");
     cart.push(item);
     clearInput();
   }
@@ -70,6 +73,7 @@ $(document).ready(() => {
         .val()
     };
 
+    console.log(item);
     validate(item);
 
     console.table(cart);
@@ -132,7 +136,7 @@ $(document).ready(() => {
             <td class="cart-productName">${cart[i].name}</td>
             <td class="cart-departmentName">${cart[i].department}</td>
             <td class="cartPrice">$${cart[i].price}</td>
-            <td class="cartQuantity">${cart[i].incart}</td>
+            <td class="cartQuantity">${cart[i].incart.parseInt()}</td>
             </tr>`);
     }
     $(".totalCart").empty();
