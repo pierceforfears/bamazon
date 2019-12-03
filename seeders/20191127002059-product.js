@@ -46,7 +46,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          productName: "Artificial Human Finger Bones",
+          productName: "Artificial Metacarpal",
           departmentName: "Oddities and Ends",
           price: 15.0,
           stockQuantity: 10,
