@@ -97,7 +97,7 @@ $(document).ready(() => {
     let totalcost = 0;
     for (let i = 0; i < cart.length; i++) {
       totalcost +=
-        parseFloat(cart[i].price) * parseFloat(cart[i].incart.padStart(3, 0));
+        parseInt(cart[i].price) * parseInt(cart[i].incart.padStart(3, 0));
       console.log(cart[i]);
       $(".tbodymodal").append(`<tr>
               <td class="cartid">${cart[i].id}</td>
@@ -129,14 +129,14 @@ $(document).ready(() => {
     let totalcost = 0;
     for (let i = 0; i < cart.length; i++) {
       totalcost +=
-        parseFloat(cart[i].price) * parseFloat(cart[i].incart.padStart(3, 0));
+        parseInt(cart[i].price) * parseInt(cart[i].incart.padStart(3, 0));
       console.log(cart[i]);
       $(".tbodymodal").append(`<tr>
             <td class="cartid">${cart[i].id}</td>
             <td class="cart-productName">${cart[i].name}</td>
             <td class="cart-departmentName">${cart[i].department}</td>
             <td class="cartPrice">$${cart[i].price}</td>
-            <td class="cartQuantity">${cart[i].incart.parseInt()}</td>
+            <td class="cartQuantity">${cart[i].incart}</td>
             </tr>`);
     }
     $(".totalCart").empty();
@@ -147,8 +147,8 @@ $(document).ready(() => {
 
 $(".btnPurchase").on("click", function() {
   for (let i = 0; i < cart.length; i++) {
-    const inCartnow = cart[i].incart;
-    const inStocknow = cart[i].instock;
+    const inCartnow = Number.parseInt(cart[i].incart);
+    const inStocknow = Number.parseInt(cart[i].instock);
     const newStock = function(a, b) {
       return a - b;
     };
